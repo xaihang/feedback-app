@@ -27,7 +27,7 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP]()
 ---
 
 ## Installation
-1. $ git clone git@github.com:xaihang/weekend-redux-feedback-loop.git
+1. $ `git clone`
 1. `npm install`
 1. `npm run server` in your terminal
 1. `npm run client` in another terminal. This should open up a new browser tab.
