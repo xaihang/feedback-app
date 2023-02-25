@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+// import axios from "axios";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import FeelingPage from '../Pages/FeelingPage';
+import UnderstandingPage from '../Pages/UnderstandingPage';
+import SupportedPage from '../Pages/SupportedPage';
+import CommentsPage from '../Pages/CommentsPage';
+import ReviewPage from '../Pages/ReviewPage';
+import ThankYouPage from '../Pages/ThankYouPage';
+import Admin from '../Pages/Admin';
 
 
 
