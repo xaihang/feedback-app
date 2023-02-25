@@ -1,9 +1,13 @@
 import React from 'react'
-import NextButton from '../NextButton/NextButton'
+import Form from '../Form';
+import NextButton from '../NextButton';
+import SubHeader from '../SubHeader';
 
 export default function CommentsPage() {
   return (
-    <div>CommentsPage
+    <div>      
+    <SubHeader pageNumber={4} />
+  <Form type="text" question={'Any comments you want to leave?'}/>
        <NextButton url={'/review'}/>
     </div>
   )

@@ -1,14 +1,6 @@
 //! feedbacks reducer
-const initialState = [
-    // {
-    //     feeling: 1,
-    //     understanding: 0,
-    //     support: 0,
-    //     comments: '', 
-    //     flagged: false,
+const initialState = {}
 
-    // }
-]
 
 const reducer = (state = initialState, action) => {
     if (action.type === "SET_FEEDBACK") {

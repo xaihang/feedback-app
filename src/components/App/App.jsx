@@ -17,7 +17,12 @@ import Admin from '../Pages/G-Admin';
 
 function App() {
 
-  const [feedback, setFeedback] = useState({})
+  const [feedback, setFeedback] = useState({
+    feeling: 0,
+    understanding: 0,
+    support: 0,
+    comments: '', 
+  })
 
 
 

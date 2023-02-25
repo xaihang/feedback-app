@@ -1,5 +1,7 @@
 import React from 'react'
-import NextButton from '../NextButton/NextButton';
+import Form from '../Form';
+import NextButton from '../NextButton';
+import SubHeader from '../SubHeader';
 
 
 
@@ -8,7 +10,8 @@ export default function FeelingPage() {
 
   return (
     <div>
-        <h2>FeelingPage</h2>
+      <SubHeader pageNumber={1} />
+        <Form question={'How are you feeling today?'}/>
         <NextButton url={'/understanding'}/>
         </div>
   );

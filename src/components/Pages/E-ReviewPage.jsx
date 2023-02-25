@@ -1,5 +1,5 @@
 import React from 'react';
-import NextButton from '../NextButton/NextButton';
+import NextButton from '../NextButton';
 
 
 export default function ReviewPage() {
