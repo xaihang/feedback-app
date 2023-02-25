@@ -82,7 +82,6 @@ export default function ReviewPage({ goNext, url }) {
         <Button
           onClick={handleNext}
           variant="contained"
-          url="/thankyou"
           feedback={feedback}
           sx={{ width: '40px', padding: '8px 16px' }}
         >
