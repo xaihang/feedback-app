@@ -35,8 +35,8 @@ export default function ReviewPage() {
   };
 
   return (
-    <div>
-       <BoxOfQuestion elevation={3}>
+    <div className="review-page">
+       <BoxOfQuestion elevation={3} >
       <h2>Review Your Feedback</h2>
       <div className="feedback-info">
         <p>
