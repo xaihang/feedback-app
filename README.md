@@ -8,16 +8,11 @@ The feedback application is an interactive and user-friendly web-based tool crea
 
 ---
 ## **TABLE OF CONTENT:**
-1. [Deployed Link](#deployed-link)
 1. [App Demo](#app-demo)
 1. [Installation](#installation)
 1. [Usage](#usage)
 1. [Technologies utilization](#technologies-utilization)
 
-
----
-## DEPLOYED LINK: 
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP]()
 
 ---
 ## App Demo
