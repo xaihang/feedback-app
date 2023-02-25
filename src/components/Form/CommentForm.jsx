@@ -43,7 +43,7 @@ export default function Form({ name, question, url }) {
         />
       </Box>
 
-      <Button onClick={goNext} variant="contained">
+      <Button onClick={goNext} variant="contained" sx={{ width: '40px', padding: '8px 16px' }}>
         NEXT
       </Button>
     </>

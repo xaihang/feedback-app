@@ -33,6 +33,6 @@ h4 {
   height: 100%;
 }
 
-.review-page {
+.review-page, .thankyou-page {
   margin-top: 125px;
 }
