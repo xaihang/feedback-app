@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import BoxOfQuestion from '../BoxOfQuestion';
+import BoxOfQuestion from '../Form/BoxOfQuestion';
 
 export default function ReviewPage() {
   const feedback = useSelector((store) => store.reducer);

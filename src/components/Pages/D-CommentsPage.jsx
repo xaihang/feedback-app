@@ -1,5 +1,5 @@
 import React from 'react';
-import BoxOfQuestion from '../BoxOfQuestion';
+import BoxOfQuestion from '../Form/BoxOfQuestion';
 import Form from '../Form/CommentForm';
 import SubHeader from '../SubHeader';
 

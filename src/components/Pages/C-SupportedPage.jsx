@@ -1,5 +1,5 @@
 import React from 'react';
-import BoxOfQuestion from '../BoxOfQuestion';
+import BoxOfQuestion from '../Form/BoxOfQuestion';
 import HoverRating from '../Form/Rating';
 import SubHeader from '../SubHeader';
 
