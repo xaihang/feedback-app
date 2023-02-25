@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../Form';
+import Form from '../Form/CommentForm';
 import SubHeader from '../SubHeader';
 
 export default function CommentsPage() {
@@ -8,7 +8,6 @@ export default function CommentsPage() {
       <SubHeader pageNumber={4} />
       <Form
         name="comments"
-        type="text"
         question={'Any comments you want to leave?'}
         url={'/review'}
       />
