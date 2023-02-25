@@ -50,7 +50,7 @@ export default function ReviewPage({ goNext, url }) {
   return (
     <div className="review-page">
       <Paper
-        sx={{ width: 500, height: 320, p: 2, mb: 7, margin: '0 auto' }}
+        sx={{ width: 500, height: 320, p: 2, mb: 4, margin: '0 auto' }}
         elevation={3}
       >
         <h2>Review Your Feedback</h2>

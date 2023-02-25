@@ -42,10 +42,15 @@ export default function Form({ name, question, url }) {
           variant="outlined"
         />
       </Box>
-
-      <Button onClick={goNext} variant="contained" sx={{ width: '40px', padding: '8px 16px' }}>
-        NEXT
-      </Button>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Button
+          onClick={goNext}
+          variant="contained"
+          sx={{ width: '40px', padding: '8px 16px' }}
+        >
+          NEXT
+        </Button>
+      </Box>
     </>
   );
 }

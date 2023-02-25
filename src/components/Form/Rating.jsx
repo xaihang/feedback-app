@@ -74,9 +74,15 @@ export default function HoverRating({ question, name, url }) {
           )}
         </Box>
       </div>
-      <Button onClick={goNext} variant="contained" sx={{ width: '40px', padding: '8px 16px' }}>
-        NEXT
-      </Button>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Button
+          onClick={goNext}
+          variant="contained"
+          sx={{ width: '40px', padding: '8px 16px', mb: 4 }}
+        >
+          NEXT
+        </Button>
+      </Box>
     </>
   );
 }
