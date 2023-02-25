@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import BoxOfQuestion from '../BoxOfQuestion';
 
 export default function ReviewPage() {
   const feedback = useSelector((store) => store.reducer);
@@ -35,6 +36,7 @@ export default function ReviewPage() {
 
   return (
     <div>
+       <BoxOfQuestion elevation={3}>
       <h2>Review Your Feedback</h2>
       <div className="feedback-info">
         <p>
@@ -53,6 +55,7 @@ export default function ReviewPage() {
       <Button onClick={handleSubmit} variant="contained">
       SUBMIT
       </Button>
+      </BoxOfQuestion>
     </div>
   );
 }
