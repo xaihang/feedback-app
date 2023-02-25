@@ -29,12 +29,11 @@ export default function HoverRating({ question, name, url }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const goNext = () => {
-
-    if(value === 0){
-        alert('Please select a value')
-        return
+    if (value === 0) {
+      alert('Please select a value');
+      return;
     }
-  
+
     const feedBack = {
       name,
       value,
@@ -45,30 +44,34 @@ export default function HoverRating({ question, name, url }) {
   return (
     <>
       <h2>{question}</h2>
-      <Box
-        sx={{
-          width: 200,
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <Rating
-          name="hover-feedback"
-          value={value}
-          precision={0.5}
-          getLabelText={getLabelText}
-          onChange={(event, newValue) => {
-            setValue(newValue);
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Box
+          sx={{
+            width: 200,
+            display: 'flex',
+            alignItems: 'center',
           }}
-          onChangeActive={(event, newHover) => {
-            setHover(newHover);
-          }}
-          emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-        />
-        {value !== null && (
-          <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-        )}
-      </Box>
+        >
+          <Rating
+            name="hover-feedback"
+            value={value}
+            precision={0.5}
+            getLabelText={getLabelText}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+            onChangeActive={(event, newHover) => {
+              setHover(newHover);
+            }}
+            emptyIcon={
+              <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+            }
+          />
+          {value !== null && (
+            <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+          )}
+        </Box>
+      </div>
       <Button onClick={goNext} variant="contained">
         NEXT
       </Button>
