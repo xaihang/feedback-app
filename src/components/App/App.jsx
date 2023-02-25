@@ -11,6 +11,7 @@ import SupportedPage from '../Pages/C-SupportedPage';
 import CommentsPage from '../Pages/D-CommentsPage';
 import ReviewPage from '../Pages/E-ReviewPage';
 import ThankYouPage from '../Pages/F-ThankYouPage';
+import Header from '../Header/Header';
 
 
 
@@ -18,11 +19,11 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
+      {/* <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
-      </header>
-
+      </header> */}
+      <Header />
       <Router>
         <div>
           <Route exact path="/">
