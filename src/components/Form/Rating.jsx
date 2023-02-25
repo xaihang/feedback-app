@@ -50,6 +50,7 @@ export default function HoverRating({ question, name, url }) {
             width: 200,
             display: 'flex',
             alignItems: 'center',
+            mb: 3
           }}
         >
           <Rating
