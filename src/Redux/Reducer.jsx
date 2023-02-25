@@ -1,16 +1,19 @@
-//! feedbacks reducer
 const initialState = {}
-
 
 const reducer = (state = initialState, action) => {
     if (action.type === "SET_FEEDBACK") {
-      return action.payload;
+      const newState = {
+        ...state,
+        [action.payload.name]: action.payload.value
+      }
+      return newState
     }
-    if (action.type === "CLEAR_CUSTOM") {
-      state = [];
+    if (action.type === "GET_FEEDBACK") {
       return state;
     }
     return state;
   };
 
   export default reducer; 
+
+  //! comments:
