@@ -10,6 +10,9 @@ const reducer = (state = initialState, action) => {
     }
     if (action.type === "GET_FEEDBACK") {
       return state;
+    } 
+    if (action.type === "CLEAR_FEEDBACK") {
+      return initialState;
     }
     return state;
   };
