@@ -1,7 +1,7 @@
 import React from 'react';
 import BoxOfQuestion from '../Form/BoxOfQuestion';
 import Form from '../Form/CommentForm';
-import SubHeader from '../SubHeader';
+import SubHeader from '../Header/SubHeader';
 
 export default function CommentsPage() {
   return (

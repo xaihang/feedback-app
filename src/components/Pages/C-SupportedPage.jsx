@@ -1,7 +1,7 @@
 import React from 'react';
 import BoxOfQuestion from '../Form/BoxOfQuestion';
 import HoverRating from '../Form/Rating';
-import SubHeader from '../SubHeader';
+import SubHeader from '../Header/SubHeader';
 
 export default function SupportedPage() {
   return (
