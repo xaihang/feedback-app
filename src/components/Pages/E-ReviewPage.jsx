@@ -5,6 +5,7 @@ import withReactContent from 'sweetalert2-react-content';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 export default function ReviewPage() {
   const feedback = useSelector((store) => store.reducer);
@@ -49,7 +50,9 @@ export default function ReviewPage() {
           <strong>Comments:</strong> <em>{feedback.comments}</em>
         </p>
       </div>
-      <button onClick={handleSubmit}>SUBMIT</button>
+      <Button onClick={handleSubmit} variant="contained">
+      SUBMIT
+      </Button>
     </div>
   );
 }
