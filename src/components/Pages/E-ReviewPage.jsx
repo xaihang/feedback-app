@@ -34,12 +34,20 @@ export default function ReviewPage() {
 
   return (
     <div>
-      <p>Review Your Feedback</p>
+      <h2>Review Your Feedback</h2>
       <div className="feedback-info">
-        <p>Feelings: {feedback.feeling}</p>
-        <p>Understanding: {feedback.understanding}</p>
-        <p>Support: {feedback.support}</p>
-        <p>Comments: {feedback.comments}</p>
+        <p>
+          <strong>Feelings:</strong> <em>{feedback.feeling}</em>
+        </p>
+        <p>
+          <strong>Understanding:</strong> <em>{feedback.understanding}</em>
+        </p>
+        <p>
+          <strong>Support:</strong> <em>{feedback.support}</em>
+        </p>
+        <p>
+          <strong>Comments:</strong> <em>{feedback.comments}</em>
+        </p>
       </div>
       <button onClick={handleSubmit}>SUBMIT</button>
     </div>
