@@ -5,6 +5,8 @@ import StarIcon from '@mui/icons-material/Star';
 import Button from '@mui/material/Button';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 const labels = {
   1: 'Useless+',
@@ -23,9 +25,13 @@ export default function HoverRating({ question, name, url }) {
   const [hover, setHover] = React.useState(-1);
   const dispatch = useDispatch();
   const history = useHistory();
+  const swal = withReactContent(Swal);
+
   const goNext = () => {
     if (value === 0) {
-      alert('Please select a value');
+      swal.fire({
+        title: 'Please select a value!',
+      });
       return;
     }
 
@@ -45,7 +51,7 @@ export default function HoverRating({ question, name, url }) {
             width: 200,
             display: 'flex',
             alignItems: 'center',
-            mb: 3
+            mb: 3,
           }}
         >
           <Rating
