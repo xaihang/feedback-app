@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+//! added feedback router 
+const feedBackRouter = require('./routes/feedback.router.js');
+app.use('/', feedBackRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

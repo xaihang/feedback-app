@@ -4,7 +4,7 @@ import NextButton from '../NextButton'
 export default function ThankYouPage() {
   return (
     <div>ThankYouPage
-      <NextButton url={'/'}/>
+      {/* <NextButton url={'/'}/> */}
     </div>
   )
 }

@@ -11,27 +11,10 @@ import SupportedPage from '../Pages/C-SupportedPage';
 import CommentsPage from '../Pages/D-CommentsPage';
 import ReviewPage from '../Pages/E-ReviewPage';
 import ThankYouPage from '../Pages/F-ThankYouPage';
-import Admin from '../Pages/G-Admin';
 
 
 
 function App() {
-
-  // const [feedback, setFeedback] = useState({
-  //   feeling: 0,
-  //   understanding: 0,
-  //   support: 0,
-  //   comments: '', 
-  // })
-
-  // const handleFeedBack = (feedback, feedbackData) => {
-  //   setFeedback((state) => ({
-  //     ...state,
-  //     feedback: feedbackData
-  //   }))
-  // }
-
-
 
   return (
     <div className='App'>
@@ -59,9 +42,6 @@ function App() {
           </Route>
           <Route exact path="/thankyou">
             <ThankYouPage />
-          </Route>
-          <Route exact path="/admin">
-            <Admin />
           </Route>
         </div>
       </Router>

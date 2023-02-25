@@ -5,11 +5,6 @@ const NextButton = ({ url, feedBack }) => {
   const history = useHistory();
 
   const goNext = () => {
-    if (url === '/thankyou' || url === '/') {
-      history.push(url);
-      return;
-    }
-
     if (feedBack?.value) {
       dispatch({ type: 'SET_FEEDBACK', payload: feedBack });
       history.push(url);
@@ -20,5 +15,4 @@ const NextButton = ({ url, feedBack }) => {
 
   return <button onClick={goNext}>NEXT</button>;
 };
-
 export default NextButton;

@@ -5,20 +5,22 @@ export default function Form({ name, question, type = 'number', url }) {
 
   const [feedBack, setFeedBack] = useState({
     name: '',
-    value: ''
+    value: null
   })
 
   const handleChange = (event) => {
+    const name = event.target.name
+    const value = name !== 'comments' ? Number(event.target.value) : event.target.value
     setFeedBack({
-      name: event.target.name,
-      value: event.target.value
+      name,
+      value
     });
   };
   return (
     <div>
       <form>
         <label>{question}</label>
-        <input type={type} name={name} value={feedBack.value} onChange={handleChange}/>
+        <input type={type} name={name} value={feedBack.value || ''} onChange={handleChange}/>
       </form>
       <NextButton url={url} feedBack={feedBack}/>
     </div>
