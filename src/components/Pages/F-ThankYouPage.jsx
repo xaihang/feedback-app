@@ -8,7 +8,10 @@ import heart from '../Pages/heart.png';
 export default function ThankYouPage() {
   const history = useHistory();
 
-  const handleReset = () => {
+  //  when the "NEXT" button is clicked:
+  // It navigates  user back to the first page using history.push.
+  // where the form will be reset and feedback can be retake if like
+  const handleGoBackToFirstPage = () => {
     history.push('/');
   };
 
@@ -27,7 +30,7 @@ export default function ThankYouPage() {
         </Box>
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Button
-            onClick={handleReset}
+            onClick={handleGoBackToFirstPage}
             variant="contained"
             sx={{ width: '40px', padding: '8px 16px', mb: 4 }}
           >

@@ -3,7 +3,6 @@ import BoxOfQuestion from '../Form/BoxOfQuestion';
 import HoverRating from '../Form/Rating';
 import SubHeader from '../Header/SubHeader';
 
-
 export default function FeelingPage() {
   return (
     <>

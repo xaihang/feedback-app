@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+// rating values to their corresponding labels
 const labels = {
   1: 'Useless+',
   2: 'Poor+',
@@ -16,17 +17,23 @@ const labels = {
   5: 'Excellent+',
 };
 
+// takes a rating value and returns a string with the number of stars and the corresponding label
 function getLabelText(value) {
   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
 
 export default function HoverRating({ question, name, url }) {
-  const [value, setValue] = React.useState(0);
-  const [hover, setHover] = React.useState(-1);
+  const [value, setValue] = React.useState(0); //  declares a state variable value and initializes it to 0
+  const [hover, setHover] = React.useState(-1); // declares a state variable hover and initializes it to -1
   const dispatch = useDispatch();
   const history = useHistory();
   const swal = withReactContent(Swal);
 
+  // when 'NEXT" button is clicked:
+  // It checks if a value has been selected, and if so, 
+  // saves the feedback and allow user to go to the next page
+  // if not it will alert the user to select rating (validation)
+  // before they can go to the next page
   const goNext = () => {
     if (value === 0) {
       swal.fire({
@@ -36,12 +43,19 @@ export default function HoverRating({ question, name, url }) {
     }
 
     const feedBack = {
+      // name holds the name of the current feedback question
       name,
+       // value holds the user's response to the feedback question
       value,
     };
+    // SET_FEEDBACK action type and payload property
+    //  are used to update the feedback state in redux store
+    //  payload property is set to the feedBack object that was created in the previous line
     dispatch({ type: 'SET_FEEDBACK', payload: feedBack });
+    // navigates to the next page in the form, as specified by the url prop
     history.push(url);
   };
+
   return (
     <>
       <h2>{question}</h2>

@@ -9,22 +9,29 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export default function ReviewPage({ goNext, url }) {
+export default function ReviewPage() {
   const feedback = useSelector((store) => store.reducer);
   const swal = withReactContent(Swal);
   const dispatch = useDispatch();
   const history = useHistory();
 
+  // when the "SUBMIT" button is clicked:
+  // it sends the feedback to the server using an HTTP POST request
+  // and displays a success message using swal
+  // it also clears the feedback state in the store using dispatch
   const handleSubmit = () => {
-    console.log('feedback', feedback);
+    // axios - sends a POST request to the backend api
     axios
       .post('/', feedback)
       .then(() => {
+        // notification to let user know feedback is successful!
         swal
           .fire({
             title: 'Feedback has been submitted!',
           })
           .then(() => {
+            // dispatch to redux to to clear form 
+            //  which will reset the feedback state to its initial value
             dispatch({ type: 'CLEAR_FEEDBACK' });
           });
       })
@@ -33,10 +40,11 @@ export default function ReviewPage({ goNext, url }) {
       });
   };
 
+  // when the "NEXT" button is clicked:
+  // it navigates to the next page using history.push
   const handleNext = () => {
     history.push('/thankyou');
   };
-
 
   const theme = createTheme({
     palette: {
@@ -45,7 +53,6 @@ export default function ReviewPage({ goNext, url }) {
       },
     },
   });
-
 
   return (
     <div className="review-page">
@@ -69,15 +76,21 @@ export default function ReviewPage({ goNext, url }) {
           </p>
         </div>
 
-<ThemeProvider theme={theme}>
-      <Button
-        onClick={handleSubmit}
-        variant="contained"
-        sx={{ width: '40px', padding: '8px 16px', mr: 2, bgcolor: 'success.main', '&:hover': { bgcolor: 'success.dark' } }}
-      >
-        SUBMIT
-      </Button>
-    </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <Button
+            onClick={handleSubmit}
+            variant="contained"
+            sx={{
+              width: '40px',
+              padding: '8px 16px',
+              mr: 2,
+              bgcolor: 'success.main',
+              '&:hover': { bgcolor: 'success.dark' },
+            }}
+          >
+            SUBMIT
+          </Button>
+        </ThemeProvider>
 
         <Button
           onClick={handleNext}
