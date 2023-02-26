@@ -16,9 +16,6 @@ export default function ReviewPage() {
   const history = useHistory();
 
   // when the "SUBMIT" button is clicked:
-  // it sends the feedback to the server using an HTTP POST request
-  // and displays a success message using swal
-  // it also clears the feedback state in the store using dispatch
   const handleSubmit = () => {
     // axios - sends a POST request to the backend api
     axios
@@ -29,11 +26,6 @@ export default function ReviewPage() {
           .fire({
             title: 'Feedback has been submitted!',
           })
-          .then(() => {
-            // dispatch to redux to to clear form 
-            //  which will reset the feedback state to its initial value
-            dispatch({ type: 'CLEAR_FEEDBACK' });
-          });
       })
       .catch((error) => {
         console.log('error in adding feedback to database', error);
