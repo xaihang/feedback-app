@@ -37,8 +37,8 @@ To add new feedback, follow these steps:
 1. In the fourth section, leave any additional comments or leave it empty, as it is not required. Then, click the "next" button to proceed to the next section.
 1. On the review page, you can review your feedback values, but you will not be able to change your input on this page.
 1. Click the "submit" button to submit your completed feedback to the server.
-1. The application will save the submission in the database, and you will see a submission success notification.
-1. If you want to reset all the data and start a new survey, click the "next" button to go back to the first step.
+1. When you submit feedback, the application will save it in the database and display a notification to confirm the submission was successful. Then, click the "next" button to proceed to the closure page where you'll see a Thank You message.
+1. Once arrived at the Thank You page, you can click the "Next" button to start a new feedback form from the beginning.
 
 ---
 
