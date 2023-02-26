@@ -58,6 +58,7 @@ To add new feedback, follow these steps:
 * [Postman](https://www.postman.com/)
 * [GitHub](https://github.com/xaihang/) 
 * [Material UI](https://mui.com/)
+* [SweetAlert2](https://sweetalert2.github.io/)
 
 
 
